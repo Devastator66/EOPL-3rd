@@ -1,2 +1,2 @@
-# ChoGath
-anything about computer technology
+# Racket
+anything about scheme
