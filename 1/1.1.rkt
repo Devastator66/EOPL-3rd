@@ -119,4 +119,14 @@
                           (3 7 9) (5 11 22) (6 13 36)))
 
 ;总结：本节所有程序的特点是对参数求逆，然后递归下降直到平凡分支。
-     
+
+;Exercise1.4
+;List-of-Int ::= () | (Int . List-of-Int)
+(define (Lint-of-Int? l)
+  (cond
+    [(null? l) #t]
+    [else (and (integer? (car l))
+               (Lint-of-Int? (cdr l)))]))
+
+(Lint-of-Int? '(-7 . (3 . (14 . ()))))
+
