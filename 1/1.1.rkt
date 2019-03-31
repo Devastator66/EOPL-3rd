@@ -122,11 +122,11 @@
 
 ;Exercise1.4
 ;List-of-Int ::= () | (Int . List-of-Int)
-(define (Lint-of-Int? l)
+(define (List-of-Int? l)
   (cond
     [(null? l) #t]
     [else (and (integer? (car l))
-               (Lint-of-Int? (cdr l)))]))
+               (List-of-Int? (cdr l)))]))
 
-(Lint-of-Int? '(-7 . (3 . (14 . ()))))
+(List-of-Int? '(-7 . (3 . (14 . ()))))
 
